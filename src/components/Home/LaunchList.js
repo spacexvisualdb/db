@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Img from 'react-cool-img';
+import loadingImage from '../../components/loader.gif';
+import errorImage from '../../components/error.jpg';
 
 const LaunchList = ({ allLaunchs }) => {
   console.log(allLaunchs)
@@ -13,7 +16,9 @@ const LaunchList = ({ allLaunchs }) => {
            
           >
 <div className="card">
-<img   src={`${item.links.flickr_images[0]}`} onError={(e)=>{e.target.onerror = null; e.target.src="https://forum.affinity.serif.com/uploads/monthly_2018_06/metin-seven_2d-vector-graphic-illustrator-illustrations_spacex-rocket-poster.png.c04cda6f8b7883a5b846c94f8d6a4498.png"}}  alt="Avatar"/>
+<Img   src={`${item.links.flickr_images[0]}`}  alt="SpaceX"
+placeholder={loadingImage}  error={errorImage}  
+/>
               <div className="container">
     <p>{item.flight_number}</p> 
   </div>
