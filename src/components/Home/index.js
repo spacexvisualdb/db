@@ -3,7 +3,7 @@ import axios from 'axios';
 import Banner from './banner';
 //import LaunchList from './LaunchList';
  
-const LaunchList = React.lazy(
+const LaunchList = lazy(
   () =>
     new Promise((resolve, reject) =>
       setTimeout(() => resolve(import("./LaunchList")), 100)
