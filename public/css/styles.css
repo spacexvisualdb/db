@@ -150,7 +150,7 @@ padding:0px;
   justify-content: space-evenly;
 
 }
-@media all and (max-width: 361px) { 
+@media all and (max-width: 373px) { 
 
   .launch_list{
     display: block;
@@ -206,7 +206,7 @@ padding:0px;
 
 }
 
-@media all and (min-width: 361px)  and (max-width: 767px) { 
+@media all and (min-width: 373px)  and (max-width: 767px) { 
 
   .launch_list{
       display: block;
