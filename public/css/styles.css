@@ -206,7 +206,7 @@ padding:0px;
 
 }
 
-@media all and (min-width: 500px)  and (max-width: 767px) { 
+@media all and (min-width: 350px)  and (max-width: 767px) { 
 
   .launch_list{
       display: block;
