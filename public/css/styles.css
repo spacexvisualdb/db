@@ -150,7 +150,7 @@ padding:0px;
   justify-content: space-evenly;
 
 }
-@media all and (max-width: 500px) { 
+@media all and (max-width: 350px) { 
 
   .launch_list{
     display: block;
@@ -188,11 +188,11 @@ padding:0px;
   height: 15%;
   align-content: center;
   top:65%;
-  font-size: 0.44rem;
+  font-size: 0.34rem;
   border-radius: 2px;
 }
 .card-left{
-  font-size: 0.8rem;
+  font-size: 0.7rem;
  
 }
 
@@ -201,7 +201,7 @@ padding:0px;
   padding-right:7px;
   margin-left: 0px;
   height: 100%;
-  line-height: 1rem;
+  line-height: 0.6rem;
 }
 
 }
