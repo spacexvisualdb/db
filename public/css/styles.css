@@ -150,7 +150,7 @@ padding:0px;
   justify-content: space-evenly;
 
 }
-@media all and (max-width: 350px) { 
+@media all and (max-width: 361px) { 
 
   .launch_list{
     display: block;
@@ -185,7 +185,7 @@ padding:0px;
 
 .banner .logo{
   width: 107%;
-  height: 15%;
+  height: 10%;
   align-content: center;
   top:65%;
   font-size: 0.34rem;
@@ -206,7 +206,7 @@ padding:0px;
 
 }
 
-@media all and (min-width: 350px)  and (max-width: 767px) { 
+@media all and (min-width: 361px)  and (max-width: 767px) { 
 
   .launch_list{
       display: block;
@@ -241,6 +241,7 @@ padding:0px;
   
   .banner .logo{
     width: 107%;
+   
     align-content: center;
     top:65%;
     font-size: 0.44rem;
