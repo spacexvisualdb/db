@@ -4,6 +4,8 @@ import Img from 'react-cool-img';
 import loadingImage from '../../components/loader.gif';
 import errorImage from '../../components/error.jpg';
 
+
+
 const LaunchList = ({ allLaunchs }) => {
   console.log(allLaunchs)
   const list = values =>
@@ -12,8 +14,6 @@ const LaunchList = ({ allLaunchs }) => {
           <Link
             key={item.flight_number}
             to={`/${item.flight_number}`}
-            
-           
           >
 <div className="card">
 <Img   src={`${item.links.flickr_images[0]}`}  alt="SpaceX"

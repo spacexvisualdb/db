@@ -1,8 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component ,lazy,Suspense} from 'react';
 import axios from 'axios';
 import Banner from './banner';
-import LaunchList from './LaunchList';
+//import LaunchList from './LaunchList';
  
+const LaunchList = React.lazy(
+  () =>
+    new Promise((resolve, reject) =>
+      setTimeout(() => resolve(import("./LaunchList")), 100)
+    )
+);
+
+
+/*
+const LaunchList= lazy(()=>
+{   new Promise((resolve, reject) =>
+      setTimeout(() => resolve(import('./LaunchList')), 100)
+)
+})
+*/
+
 const URL_LAUNCH_PAST = 'https://api.spacexdata.com/v3/launches/past';
 const URL_LAUNCH_NEXT = 'https://api.spacexdata.com/v3/launches/next';
 
@@ -28,10 +44,12 @@ class Home extends Component {
   render() {
     return (
       <>
+       <Suspense fallback={<div>Loading...</div>}>
        <div className="next-launch-box">
        <Banner nextLaunch={this.state.next} />
        </div>
         <LaunchList allLaunchs={this.state.launchs} />
+        </Suspense>
       </>
     );
   }
