@@ -9,7 +9,7 @@ const Banner = ({nextLaunch}) => {
     <div className='banner'>
       <div className='main_cover'>
         <div className='logo'>
-          <div class="card-left">
+          <div className="card-left">
           <span>LATEST LAUNCH</span>
           </div>
          <div className="card-right">

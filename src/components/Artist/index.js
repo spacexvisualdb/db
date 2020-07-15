@@ -5,11 +5,11 @@ import AlbumList from './albumList';
 
 const REQ_URL = 'https://api.spacexdata.com/v3/launches';
 
-const Artist = props => {
+const Flight = props => {
   const [artist, setArtist] = useState('');
   useEffect(() => {
     axios
-      .get(`${REQ_URL}/${props.match.params.flight_number}`)
+      .get(`${REQ_URL}/${props.match.params.flightId}`)
       .then(response => {
         setArtist(response.data);
       })
@@ -22,29 +22,22 @@ const Artist = props => {
   return (
   
     <>
-    
+    <span className="blackbar"></span>
+     
       <div className='artist_bio'>
-        <div>
-          <Link to={`/${artist.flight_number - 1}`}>Previous Artist</Link>
+      <h3>{artist.mission_name}</h3>
+      <div className="bio_nav">
+          <Link to={`/${artist.flight_number - 1}`}>Previous Launch</Link>
           <span>/</span>
-          <Link to={`/${artist.flight_number + 1}`}>Next Artist</Link>
+          <Link to={`/${artist.flight_number + 1}`}>Next Launch</Link>
         </div>
-        <div className='avatar'>
-          <span
-            style={{
-              background: ` url("/images/covers/${artist.cover}.jpg") no-repeat`
-            }}
-          ></span>
-        </div>
+       
+       
       </div>
-      <div className='artist_bio'>
-        <h3>{artist.mission_name}</h3>
-        <div className='bio_text'> {artist.details} </div>
-      </div>
-            
+      <div className='bio_text'> {artist.details} </div>
       <AlbumList albumList={artist} />
     </>
   );
 
 };
-export default Artist;
+export default Flight;

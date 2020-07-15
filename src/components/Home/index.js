@@ -11,13 +11,6 @@ const LaunchList = lazy(
 );
 
 
-/*
-const LaunchList= lazy(()=>
-{   new Promise((resolve, reject) =>
-      setTimeout(() => resolve(import('./LaunchList')), 100)
-)
-})
-*/
 
 const URL_LAUNCH_PAST = 'https://api.spacexdata.com/v3/launches/past';
 const URL_LAUNCH_NEXT = 'https://api.spacexdata.com/v3/launches/next';

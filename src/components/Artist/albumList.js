@@ -1,30 +1,30 @@
 import React from 'react';
 
+
 const AlbumList = ({ albumList }) => {
 
-  const showlist = albums =>
+    const showlist = albums =>
     albums
       ? albums.links.flickr_images.map((item, i) => (
-       
+ 
           //{} olsaydı fonskiyon döndürürdü. () olduğu için jsx döndürüyor
-          
-          <a
-          className='artist_item'
-          style={{ background: `url(${item})`}}
-            key={i}
-            alt='album_cover'
-          />
+      <img class='flight-card' key={i} alt="spacexlaunchimage" src={`${item}`}/>
         
-        ))
+        )
+        
+        )
       : console.log("aşlksdla");
+      
+    
   return (
     <>
-    <div className='artists_list'>
+
       
-    <div className='artist_container'>{showlist(albumList)}</div>
-  </div>
+    <section className='flight_images_container'>{showlist(albumList)}</section>
+  
       
     </>
   );
+ 
 };
 export default AlbumList;
