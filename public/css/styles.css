@@ -11,7 +11,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+h5{
+  font-weight: normal;
+}
 
 /* =======================================
                     BANNER
@@ -159,15 +161,20 @@ padding:0px;
  
    border-radius: 5px; 
  }
- .artist_bio{
+ .bio_top{
    margin-top: 12%;
-   padding: 1rem;
+
    padding-bottom: 0px;
    display: flex;
    justify-content: space-between;
    align-items: center;
  }
- .bio_text{   padding: 1rem; padding-top: 0px;
+.artist_bio{
+  padding: 1rem;
+}
+.bio_text{
+  display:inline-block;
+
 }
 .blackbar{
   position: absolute;

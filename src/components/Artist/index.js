@@ -25,16 +25,18 @@ const Flight = props => {
     <span className="blackbar"></span>
      
       <div className='artist_bio'>
-      <h3>{artist.mission_name}</h3>
+     <div className="bio_top">
+     <h3>{artist.mission_name}</h3>
       <div className="bio_nav">
-          <Link to={`/${artist.flight_number - 1}`}>Previous Launch</Link>
+          <Link to={`/${artist.flight_number - 1}`}>Previous</Link>
           <span>/</span>
-          <Link to={`/${artist.flight_number + 1}`}>Next Launch</Link>
+          <Link to={`/${artist.flight_number + 1}`}>Next </Link>
         </div>
+     </div>
        
-       
+        <h5>{artist.details}</h5> 
       </div>
-      <div className='bio_text'> {artist.details} </div>
+     
       <AlbumList albumList={artist} />
     </>
   );
